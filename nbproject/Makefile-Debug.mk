@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/dice_role.o \
+	${OBJECTDIR}/dicerole.o \
 	${OBJECTDIR}/welcome.o
 
 
@@ -67,6 +68,11 @@ ${OBJECTDIR}/dice_role.o: dice_role.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dice_role.o dice_role.cpp
+
+${OBJECTDIR}/dicerole.o: dicerole.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dicerole.o dicerole.cpp
 
 ${OBJECTDIR}/welcome.o: welcome.cc 
 	${MKDIR} -p ${OBJECTDIR}
